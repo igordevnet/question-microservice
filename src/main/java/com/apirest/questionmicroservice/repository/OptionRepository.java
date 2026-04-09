@@ -1,6 +1,6 @@
-package com.apirest.quizapp.repository;
+package com.apirest.questionmicroservice.repository;
 
-import com.apirest.quizapp.model.Option;
+import com.apirest.questionmicroservice.model.Option;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

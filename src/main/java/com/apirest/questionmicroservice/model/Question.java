@@ -1,6 +1,5 @@
-package com.apirest.quizapp.model;
+package com.apirest.questionmicroservice.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,8 +26,4 @@ public class Question {
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
     private List<Option> options;
-
-    @ManyToMany
-    @JsonBackReference
-    private List<Quiz> quizzes;
 }

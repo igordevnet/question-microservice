@@ -1,6 +1,6 @@
-package com.apirest.quizapp.dto.request;
+package com.apirest.questionmicroservice.dto.request;
 
-import com.apirest.quizapp.model.Option;
+import com.apirest.questionmicroservice.model.Option;
 
 import java.util.List;
 

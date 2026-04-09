@@ -1,8 +1,11 @@
-package com.apirest.quizapp.controller;
+package com.apirest.questionmicroservice.controller;
 
-import com.apirest.quizapp.dto.request.QuestionRequest;
-import com.apirest.quizapp.dto.response.QuestionResponse;
-import com.apirest.quizapp.service.QuestionService;
+import com.apirest.questionmicroservice.dto.request.AnswerRequest;
+import com.apirest.questionmicroservice.dto.request.QuestionRequest;
+import com.apirest.questionmicroservice.dto.response.CheckAnswerResponse;
+import com.apirest.questionmicroservice.dto.response.QuestionResponse;
+import com.apirest.questionmicroservice.model.Answer;
+import com.apirest.questionmicroservice.service.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,5 +46,27 @@ public class QuestionController {
         questionService.addQuestion(question);
 
         return new ResponseEntity<>("New question created successfully!", HttpStatus.CREATED);
+    }
+
+    @GetMapping("/generate")
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(
+            @RequestParam String category,
+            @RequestParam Integer nQuestions
+    ) {
+        return ResponseEntity.ok(questionService.findRandomQuestionsByCategory(category, nQuestions));
+    }
+
+    @GetMapping("/get")
+    public ResponseEntity<List<QuestionResponse>> getQuestionsById(
+            @RequestParam List<Integer> ids
+    ) {
+        return  ResponseEntity.ok(questionService.getQuestionsById(ids));
+    }
+
+    @PostMapping("/check")
+    public ResponseEntity<CheckAnswerResponse> checkAnswers(
+            @RequestBody List<AnswerRequest> answers
+    ) {
+        return ResponseEntity.ok(questionService.checkAnswers(answers));
     }
 }

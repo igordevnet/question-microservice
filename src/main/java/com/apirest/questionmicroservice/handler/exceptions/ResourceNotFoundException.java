@@ -1,4 +1,4 @@
-package com.apirest.quizapp.handler.exceptions;
+package com.apirest.questionmicroservice.handler.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

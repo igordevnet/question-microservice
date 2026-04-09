@@ -1,6 +1,6 @@
-package com.apirest.quizapp.handler;
+package com.apirest.questionmicroservice.handler;
 
-import com.apirest.quizapp.handler.exceptions.ResourceNotFoundException;
+import com.apirest.questionmicroservice.handler.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

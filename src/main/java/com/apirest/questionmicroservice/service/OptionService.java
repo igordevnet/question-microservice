@@ -1,7 +1,7 @@
-package com.apirest.quizapp.service;
+package com.apirest.questionmicroservice.service;
 
-import com.apirest.quizapp.model.Option;
-import com.apirest.quizapp.repository.OptionRepository;
+import com.apirest.questionmicroservice.model.Option;
+import com.apirest.questionmicroservice.repository.OptionRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

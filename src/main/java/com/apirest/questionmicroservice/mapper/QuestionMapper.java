@@ -1,10 +1,9 @@
-package com.apirest.quizapp.mapper;
+package com.apirest.questionmicroservice.mapper;
 
-import com.apirest.quizapp.dto.request.QuestionRequest;
-import com.apirest.quizapp.dto.response.QuestionResponse;
-import com.apirest.quizapp.model.Question;
+import com.apirest.questionmicroservice.dto.request.QuestionRequest;
+import com.apirest.questionmicroservice.dto.response.QuestionResponse;
+import com.apirest.questionmicroservice.model.Question;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 import java.util.List;
 

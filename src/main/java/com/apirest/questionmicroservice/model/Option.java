@@ -1,4 +1,4 @@
-package com.apirest.quizapp.model;
+package com.apirest.questionmicroservice.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
